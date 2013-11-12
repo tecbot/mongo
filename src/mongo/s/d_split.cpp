@@ -267,7 +267,7 @@ namespace mongo {
                 maxSplitPoints = maxSplitPointsElem.numberLong();
             }
 
-            long long maxChunkObjects = Chunk::MaxObjectPerChunk;
+            long long maxChunkObjects = 0;
             BSONElement MaxChunkObjectsElem = jsobj[ "maxChunkObjects" ];
             if ( MaxChunkObjectsElem.isNumber() ) {
                 maxChunkObjects = MaxChunkObjectsElem.numberLong();
